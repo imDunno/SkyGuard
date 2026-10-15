@@ -99,7 +99,7 @@
 | [`恢复网络.bat`](恢复网络.bat) | 应急恢复网络（GBK 编码） |
 | [`恢复网络.ps1`](恢复网络.ps1) | 恢复网络的 PowerShell 实现 |
 | [`SkyGuardGUI.exe.manifest`](SkyGuardGUI.exe.manifest) | 管理员权限 / DPI 声明 |
-| [`LICENSE.txt`](LICENSE.txt) | MIT License + 免责声明 |
+| [`LICENSE.txt`](LICENSE.txt) | MIT License（标准正文） |
 | [`version.txt`](version.txt) | 版本号 |
 | [`update.json`](update.json) | 机器可读的文件清单（大小 + SHA256） |
 | [`发布清单.txt`](发布清单.txt) | 人读的文件清单（逐行比 SHA256） |
@@ -110,7 +110,9 @@
 
 ## 许可证
 
-[MIT License](LICENSE.txt) —— 详见文件末尾的免责声明（重要，请连同一起保留）。
+[MIT License](LICENSE.txt) —— 标准 MIT 正文。
+
+补充免责声明见 [README.txt](README.txt) 末尾（重要，请一并保留）。
 
 ---
 
