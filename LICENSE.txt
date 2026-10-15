@@ -1,0 +1,37 @@
+MIT License
+
+Copyright (c) 2026 SkyGuard contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+-------------------------------------------------------------------------------
+免责声明（重要，请连同上面一起保留）
+
+本工具会以管理员权限强制结束你指定的进程、并临时禁用你指定的网卡。
+它按"原样"提供，作者不对以下情况负责：
+
+  · 未保存的游戏进度丢失
+  · 断网期间其他网络活动中断（语音、网页等）
+  · 因误设触发键、误配目标程序造成的任何后果
+  · 任何游戏账号相关的风险（本工具不注入游戏、不读内存、不改游戏文件，
+    但它的行为特征——装键盘钩子、强杀进程、断网——可能被游戏的
+    安全策略关注，请自行评估风险后使用）
+
+请确认你已阅读并理解以上内容再使用。

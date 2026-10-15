@@ -1,0 +1,30 @@
+# ---------------------------------------------------------------------------
+# Build output
+# The release binary is NOT tracked in this repository. Build it yourself with
+# 编译.bat (uses the csc.exe shipped with Windows, no SDK or network needed),
+# or download it from the Releases page.
+# ---------------------------------------------------------------------------
+SkyGuardGUI.exe
+skgwarmdummy.exe
+
+# ---------------------------------------------------------------------------
+# Runtime scratch files
+# The tool writes diagnostics into its own directory while running / self-testing.
+# ---------------------------------------------------------------------------
+_*.txt
+*.log
+
+# ---------------------------------------------------------------------------
+# Local user settings (machine-specific, never commit)
+# ---------------------------------------------------------------------------
+guard.ini
+*.ini
+
+# ---------------------------------------------------------------------------
+# OS / editor noise
+# ---------------------------------------------------------------------------
+Thumbs.db
+desktop.ini
+.vs/
+*.user
+*.suo

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity version="1.0.0.0" processorArchitecture="*" name="SkyGuardGUI" type="win32"/>
+  <description>SkyGuard GUI - panic guard for Sky: Children of the Light</description>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    <security>
+      <requestedPrivileges>
+        <!-- 需要管理员权限: 强杀进程 + 禁用网卡 -->
+        <requestedExecutionLevel level="requireAdministrator" uiAccess="false"/>
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+
+  <!-- ===================================================================
+       DPI 感知 (2026-09-16 补)
+       不声明的话, Windows 10/11 在 125%/150% 缩放下会**替我们位图拉伸**整个窗口,
+       表现就是"字发虚、边缘发糊" —— 这才是高 DPI 下最难看的那个问题。
+       两行都留着是为了覆盖不同系统版本:
+         · <dpiAware>true</dpiAware>          Win7 / 8.1 / 10 / 11 都认(系统级 DPI 感知)
+         · <dpiAwareness>PerMonitorV2</...>   Win10 1607+ 认, 多显示器各自不同缩放时能自动跟随
+       窗口大小本身由代码里的 AutoScaleMode.Font 负责缩放, 两者配合才是"清晰 + 合适"。
+       =================================================================== -->
+  <application xmlns="urn:schemas-microsoft-com:asm.v3">
+    <windowsSettings>
+      <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
+      <dpiAwareness xmlns="http://schemas.microsoft.com/SMI/2016/WindowsSettings">PerMonitorV2</dpiAwareness>
+    </windowsSettings>
+  </application>
+
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Vista / 7 / 8 / 8.1 / 10 / 11 全部声明为受支持, 避免被当成未知程序套兼容性垫片 -->
+      <supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"/>
+      <supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>
+      <supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"/>
+      <supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>
+      <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}"/>
+    </application>
+  </compatibility>
+</assembly>

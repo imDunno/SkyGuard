@@ -1,0 +1,18 @@
+# Preserve the project's existing line endings byte-for-byte.
+#
+# 编译.bat and 恢复网络.bat are intentionally GBK-encoded (they run `chcp 936`),
+# and SkyGuardGUI.cs uses CRLF while most .txt files use LF. Letting Git apply
+# EOL normalisation or encoding guessing would rewrite these files, so every
+# type tracked here is marked as not-text.
+#
+# Note: `-text` only disables EOL conversion; diffs are still rendered.
+
+*.cs        -text
+*.bat       -text
+*.ps1       -text
+*.txt       -text
+*.md        -text
+*.json      -text
+*.manifest  -text
+.gitignore  -text
+.gitattributes -text
