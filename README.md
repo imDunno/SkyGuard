@@ -76,11 +76,25 @@
 
 ---
 
+## 下载编译好的程序
+
+不想自己编译的话，直接到 **[Releases](https://github.com/imDunno/SkyGuard/releases)** 页面下载 `SkyGuardGUI.exe`。
+
+当前版本 `V1.1.6-RC1`。下载后建议核对 SHA256：
+
+    E6FD02A80D173A8AB41DEFB79A07A5CB261E25CE185EBB86C9F041E6641E4BF0
+
+在 PowerShell 里核对：
+
+    Get-FileHash .\SkyGuardGUI.exe -Algorithm SHA256
+
+> 程序未签名，第一次运行会被 Windows SmartScreen 拦下（点【更多信息】→【仍要运行】），杀软也可能报警 —— 这是预期内的，原因见上面的「使用前必读」。
+
+---
+
 ## 从源码编译
 
-本仓库**只包含源码和文档，不含编译好的 exe**。
-
-双击 [`编译.bat`](编译.bat) 即可编译，用的是 Windows 自带的 C# 编译器（`csc.exe`，.NET Framework 4.x），**不需要 Visual Studio、不需要 .NET SDK、不需要联网**。编译前请先关掉正在运行的 SkyGuardGUI.exe。
+仓库里不放编译产物，exe 只在 Releases 页面提供。想自己审代码或改代码，双击 [`编译.bat`](编译.bat) 即可编译，用的是 Windows 自带的 C# 编译器（`csc.exe`，.NET Framework 4.x），**不需要 Visual Studio、不需要 .NET SDK、不需要联网**。编译前请先关掉正在运行的 SkyGuardGUI.exe。
 
 产物是当前目录下的单文件 `SkyGuardGUI.exe`。
 
